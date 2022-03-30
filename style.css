@@ -1,0 +1,27 @@
+body {
+    /* background-color: black */
+    background-image: url(https://i.insider.com/4f9ff0f4ecad04d414000007?width=600&format=jpeg&auto=webp);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family:sans-serif;
+    font-size: 50px;
+}
+
+#player-list {
+    color: white;
+    text-align:center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#player-stats {
+    color: white;
+}
+
+#add-player-form {
+    color: white;
+    width: 30%;
+}
