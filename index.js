@@ -13,6 +13,8 @@ let position = document.createElement('h4')
 let jersey = document.createElement('h4')
 let height = document.createElement('h4')
 let weight = document.createElement('h4')
+let likesString = document.createElement('h4')
+let likesAmount = 0
 
 submitButton.addEventListener('click', (e) => {
 e.preventDefault()
@@ -35,7 +37,17 @@ let request = async () => {
             birthCountry.innerText = `Birth Country: ${element.BirthCountry}`
             birthCity.innerText = `City: ${element.BirthCity}`
             birthState.innerText = `State: ${element.BirthState}`
-            playerStats.append(playerName, birthCountry, birthCity, birthState, college, position, jersey, height, weight)
+            likesString.innerText = `Likes: ${likesAmount}`
+            let likesBtn = document.createElement('button')
+            likesBtn.innerText = `Like ${element.FirstName} ${element.LastName}`
+
+            likesBtn.addEventListener('click', () => {
+                likesAmount += 1
+                likesString.innerHTML = `Likes: ${likesAmount}`
+               
+            })
+
+            playerStats.append(playerName, birthCountry, birthCity, birthState, college, position, jersey, height, weight, likesString, likesBtn)
         })
         playerList.append(playerName)
     })
@@ -43,3 +55,6 @@ let request = async () => {
 request()    
 })
 
+// teamName.addEventListener('click', () => {
+
+// })
