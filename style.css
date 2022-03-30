@@ -1,6 +1,6 @@
 body {
-    background-color: black
-    /* background-image: url(https://i.insider.com/4f9ff0f4ecad04d414000007?width=600&format=jpeg&auto=webp); */
+    background-color: black;
+    /* background-image: url(https://a4.espncdn.com/combiner/i?img=%2Fi%2Fespn%2Fmisc_logos%2F500%2Fnba.png); */
     /* background-size: cover; */
 }
 
@@ -22,7 +22,7 @@ h1 {
     color: white;
 }
 
-#add-player-form {
+#team-entry {
     color: white;
-    width: 30%;
+    
 }
