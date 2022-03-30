@@ -1,6 +1,7 @@
 body {
-    /* background-color: black */
-    background-image: url(https://i.insider.com/4f9ff0f4ecad04d414000007?width=600&format=jpeg&auto=webp);
+    background-color: black
+    /* background-image: url(https://i.insider.com/4f9ff0f4ecad04d414000007?width=600&format=jpeg&auto=webp); */
+    /* background-size: cover; */
 }
 
 h1 {
