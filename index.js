@@ -42,8 +42,10 @@ submitButton.addEventListener('click', (e) => {
             birthCity.innerText = `City: ${element.BirthCity}`
             birthState.innerText = `State: ${element.BirthState}`
             likesString.innerText = `Likes: ${likesAmount}`
-            let likesBtn = document.createElement('button')
-            likesBtn.innerText = `Like ${element.FirstName} ${element.LastName}`
+            let likesBtn = document.createElement('img')
+            likesBtn.setAttribute('src', './likeButton.png')
+            likesBtn.setAttribute('height', '30px')
+            likesBtn.setAttribute('width', '60px')
 
             likesBtn.addEventListener('click', () => {
                 likesAmount += 1
@@ -83,8 +85,10 @@ teamName.addEventListener('click', async () => {
             birthCity.innerText = `City: ${element.BirthCity}`
             birthState.innerText = `State: ${element.BirthState}`
             likesString.innerText = `Likes: ${likesAmount}`
-            let likesBtn = document.createElement('button')
-            likesBtn.innerText = `Like ${element.FirstName} ${element.LastName}`
+            let likesBtn = document.createElement('img')
+            likesBtn.setAttribute('src', './likeButton.png')
+            likesBtn.setAttribute('height', '30px')
+            likesBtn.setAttribute('width', '60px')
 
             likesBtn.addEventListener('click', () => {
                 likesAmount += 1
