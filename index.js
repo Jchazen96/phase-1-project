@@ -1,4 +1,3 @@
-
 let playerList = document.getElementById('player-list')
 let playerStats = document.getElementById('player-stats')
 let addPlayerForm = document.getElementById('add-player-form')
@@ -28,6 +27,7 @@ submitButton.addEventListener('click', (e) => {
         let playerName = document.createElement('h2')
         playerName.innerText = `${element.FirstName} ${element.LastName}`
         playerName.addEventListener('click', () => {
+            likesAmount = 0
             playerList.innerText = ""
             weight.innerText = `Weight: ${element.Weight} pounds`
             height.innerText = `Height: ${parseInt(element.Height / 12)}'${element.Height%12}`
@@ -40,7 +40,6 @@ submitButton.addEventListener('click', (e) => {
             likesString.innerText = `Likes: ${likesAmount}`
             let likesBtn = document.createElement('button')
             likesBtn.innerText = `Like ${element.FirstName} ${element.LastName}`
-            
 
             likesBtn.addEventListener('click', () => {
                 likesAmount += 1
@@ -63,6 +62,29 @@ teamName.addEventListener('click', async () => {
         playerStats.innerText = ""
         let playerName = document.createElement('h2')
         playerName.innerText = `${element.FirstName} ${element.LastName}`
+        playerName.addEventListener('click', () => {
+            likesAmount = 0
+            playerList.innerText = ""
+            weight.innerText = `Weight: ${element.Weight} pounds`
+            height.innerText = `Height: ${parseInt(element.Height / 12)}'${element.Height%12}`
+            jersey.innerText = `Jersey #: ${element.Jersey}`
+            position.innerText = `Position: ${element.Position}`
+            college.innerText = `College: ${element.College}`
+            birthCountry.innerText = `Birth Country: ${element.BirthCountry}`
+            birthCity.innerText = `City: ${element.BirthCity}`
+            birthState.innerText = `State: ${element.BirthState}`
+            likesString.innerText = `Likes: ${likesAmount}`
+            let likesBtn = document.createElement('button')
+            likesBtn.innerText = `Like ${element.FirstName} ${element.LastName}`
+
+            likesBtn.addEventListener('click', () => {
+                likesAmount += 1
+                likesString.innerHTML = `Likes: ${likesAmount}`
+               
+            })
+
+            playerStats.append(playerName, birthCountry, birthCity, birthState, college, position, jersey, height, weight, likesString, likesBtn)
+        })
         playerList.append(playerName)
     })
 })
