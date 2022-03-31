@@ -58,6 +58,7 @@ request()
 teamName.addEventListener('click', async () => {
     let req = await fetch (`https://api.sportsdata.io/v3/nba/scores/json/Players/${teamName.innerText}?key=cd2a129a59b1452abe4d8cfa2ee494ce`)
     let res = await req.json()
+    playerList.innerText = "Click a player: "
     res.forEach((element) => {
         playerStats.innerText = ""
         let playerName = document.createElement('h2')

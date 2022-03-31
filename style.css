@@ -9,6 +9,8 @@ h1 {
     text-align: center;
     font-family:sans-serif;
     font-size: 50px;
+    border-bottom: 2px solid;
+    border-color: white;
 }
 
 #player-list {
@@ -19,14 +21,15 @@ h1 {
 }
 
 #player-stats {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
 }
 
 #team-entry {
+    text-align: center;
+    border-top: 2px solid;
+    border-color: white;
     color: white;
+    padding-top: 15px;
     
-}
-
-#comments {
-    color: white;
 }
