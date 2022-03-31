@@ -17,14 +17,14 @@ let likesString = document.createElement('h4')
 let likesAmount = 0
 
 submitButton.addEventListener('click', (e) => {
-e.preventDefault()
-playerList.innerText = "Click a player: "
-playerStats.innerText = ""
-let request = async () => {
-    req = await fetch(`https://api.sportsdata.io/v3/nba/scores/json/Players/${teamEntry.value}?key=cd2a129a59b1452abe4d8cfa2ee494ce`)
-    res = await req.json()
-    teamName.innerText = `${res[0].Team}`
-    res.forEach((element) => {
+    e.preventDefault()
+    playerList.innerText = "Click a player: "
+    playerStats.innerText = ""
+    let request = async () => {
+        req = await fetch(`https://api.sportsdata.io/v3/nba/scores/json/Players/${teamEntry.value}?key=cd2a129a59b1452abe4d8cfa2ee494ce`)
+        res = await req.json()
+        teamName.innerText = `${res[0].Team}`
+        res.forEach((element) => {
         let playerName = document.createElement('h2')
         playerName.innerText = `${element.FirstName} ${element.LastName}`
         playerName.addEventListener('click', () => {
@@ -40,6 +40,7 @@ let request = async () => {
             likesString.innerText = `Likes: ${likesAmount}`
             let likesBtn = document.createElement('button')
             likesBtn.innerText = `Like ${element.FirstName} ${element.LastName}`
+            
 
             likesBtn.addEventListener('click', () => {
                 likesAmount += 1
@@ -55,6 +56,13 @@ let request = async () => {
 request()    
 })
 
-// teamName.addEventListener('click', () => {
-
-// })
+teamName.addEventListener('click', async () => {
+    let req = await fetch (`https://api.sportsdata.io/v3/nba/scores/json/Players/${teamName.innerText}?key=cd2a129a59b1452abe4d8cfa2ee494ce`)
+    let res = await req.json()
+    res.forEach((element) => {
+        playerStats.innerText = ""
+        let playerName = document.createElement('h2')
+        playerName.innerText = `${element.FirstName} ${element.LastName}`
+        playerList.append(playerName)
+    })
+})
