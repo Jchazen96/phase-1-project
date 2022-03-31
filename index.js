@@ -29,6 +29,10 @@ submitButton.addEventListener('click', (e) => {
         playerName.addEventListener('click', () => {
             likesAmount = 0
             playerList.innerText = ""
+            let playerLink = document.createElement('a')
+            playerLink.innerText = `${element.FirstName} ${element.LastName}`
+            playerLink.setAttribute('href', `https://google.com/search?q=${element.FirstName}+${element.LastName}`)
+            playerLink.setAttribute('target', '_blank')
             weight.innerText = `Weight: ${element.Weight} pounds`
             height.innerText = `Height: ${parseInt(element.Height / 12)}'${element.Height%12}`
             jersey.innerText = `Jersey #: ${element.Jersey}`
@@ -47,7 +51,7 @@ submitButton.addEventListener('click', (e) => {
                
             })
 
-            playerStats.append(playerName, birthCountry, birthCity, birthState, college, position, jersey, height, weight, likesString, likesBtn)
+            playerStats.append(playerLink, birthCountry, birthCity, birthState, college, position, jersey, height, weight, likesString, likesBtn)
         })
         playerList.append(playerName)
     })
@@ -65,6 +69,10 @@ teamName.addEventListener('click', async () => {
         playerName.innerText = `${element.FirstName} ${element.LastName}`
         playerName.addEventListener('click', () => {
             likesAmount = 0
+            let playerLink = document.createElement('a')
+            playerLink.innerText = `${element.FirstName} ${element.LastName}`
+            playerLink.setAttribute('href', `https://google.com/search?q=${element.FirstName}+${element.LastName}`)
+            playerLink.setAttribute('target', '_blank')
             playerList.innerText = ""
             weight.innerText = `Weight: ${element.Weight} pounds`
             height.innerText = `Height: ${parseInt(element.Height / 12)}'${element.Height%12}`
@@ -84,7 +92,7 @@ teamName.addEventListener('click', async () => {
                
             })
 
-            playerStats.append(playerName, birthCountry, birthCity, birthState, college, position, jersey, height, weight, likesString, likesBtn)
+            playerStats.append(playerLink, birthCountry, birthCity, birthState, college, position, jersey, height, weight, likesString, likesBtn)
         })
         playerList.append(playerName)
     })
