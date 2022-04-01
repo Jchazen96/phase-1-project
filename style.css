@@ -17,16 +17,11 @@ h1 {
     
 }
 
+
 h1:hover {
     color: blue;
 }
 
-/* .header {
-    /* width: 300px;
-    height: 300px; */
-    /* margin: 0;
-    background-color: yellow;
-} */ 
 
 #player-list {
     color: white;
@@ -53,4 +48,10 @@ h2:hover {
     color: white;
     padding-top: 15px;
     
+}
+
+#homebtn {
+    
+    width: 50px;
+    height: 30px;
 }

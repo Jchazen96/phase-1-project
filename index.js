@@ -4,6 +4,7 @@ let addPlayerForm = document.getElementById('add-player-form')
 let submitButton = document.getElementById('submit')
 let teamName = document.getElementById('teamName')
 let teamEntry = document.getElementById('teamEntry')
+let homeBtn = document.getElementById('homebtn')
 let birthCountry = document.createElement('h4')
 let birthCity = document.createElement('h4')
 let birthState = document.createElement('h4')
@@ -100,4 +101,10 @@ teamName.addEventListener('click', async () => {
         })
         playerList.append(playerName)
     })
+})
+
+homeBtn.addEventListener('click', () => {
+    teamName.innerText = "Enter Team Name"
+    playerList.innerText = ""
+    playerStats.innerText = ""
 })
